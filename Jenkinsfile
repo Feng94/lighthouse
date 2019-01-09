@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'rust:latest' } }
+    agent { docker { dockerfile: true } }
     stages {
         stage('build') {
             steps {
