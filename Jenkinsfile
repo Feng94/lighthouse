@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'rust:1.31-stretch' } }
+    agent { docker { image 'rust:latest' } }
     stages {
         stage('build') {
             steps {
-                sh 'rustc --version'
+                sh 'cargo build'
             }
         }
     }
